@@ -24,30 +24,24 @@ public class App {
 
         // 입력된 값에 따라 적절한 연산 실행.
         switch (operator) {
-            case '+':
-
+            case '+': // 덧셈 연산
                 result = num1 + num2;
                 break;
-            case '-':
-
+            case '-': // 뺄셈 연산
                 result = num1 - num2;
                 break;
-            case '*':
-
+            case '*': //곱하기 연산
                 result = num1 * num2;
                 break;
-            case '/':
-
+            case '/': //나누기 연산
                 if (num2 == 0) {
                     System.out.println("0으로 나눌 수 없습니다.");
                     break;
                 } else {
-
                     result = num1 / num2;
                     break;
                 }
-            default:
-
+            default: //입력 오류
                 System.out.println("잘못된 연산자가 입력되었습니다.");
                 break;
         }
