@@ -15,9 +15,43 @@ public class App {
         System.out.print("두 번째 숫자를 입력하시오. : ");
         int num2 = scanner.nextInt();
 
-        // 사용자에게 사칙연산 기호 입력을 요청하고, 입력된 첫 번째 문자를 operator 변수에 저장합니다.
+        // 사칙연산 기호를 입력 받고, 입력된 값을 operator에 저장
         System.out.print("사칙연산 기호를 입력하세요. : ");
         char operator = scanner.next().charAt(0);
+
+        // 연산 결과를 저장
+        int result = 0;
+
+        // 입력된 값에 따라 적절한 연산 실행.
+        switch (operator) {
+            case '+':
+
+                result = num1 + num2;
+                break;
+            case '-':
+
+                result = num1 - num2;
+                break;
+            case '*':
+
+                result = num1 * num2;
+                break;
+            case '/':
+
+                if (num2 == 0) {
+                    System.out.println("0으로 나눌 수 없습니다.");
+                    break;
+                } else {
+
+                    result = num1 / num2;
+                    break;
+                }
+            default:
+
+                System.out.println("잘못된 연산자가 입력되었습니다.");
+                break;
+        }
+            System.out.println("결과 : " + result);
 
     }
 }
